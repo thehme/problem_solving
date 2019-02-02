@@ -22,21 +22,9 @@
  * [85, 21, 110]
  */
 
-function rotateMatrix(matrix) {
-    let rotatedMatrix = Array(matrix.length, matrix.length);
-	for (var row = 0; row < matrix.length; row++) {
-		for (var col = 0; col < matrix.length; col++) {
-            var temp1 = matrix[row + col][col]; 
-            // console.log(temp1);
-            var temp2 = matrix[col][matrix.length-1];
-            console.log(temp2);
-            matrix[col][(matrix.length-1) - row] = temp1;
-            matrix[matrix.length-1][matrix.length-1] = temp2;
-        }
-    }
-    return matrix;
-};
+const Api = require('./lib/api');
+const api = new Api();
 
 let m = [[41, 97, 110], [23, 156, 21], [120, 65, 85]];
-console.log(rotateMatrix(m));
+console.log(api.rotateMatrix(m));
 // rotateMatrix(m);

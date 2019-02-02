@@ -4,24 +4,8 @@
 // If the "compressed" string would not become smaller than the original string, 
 // your method should return the original string. You can assume the string has only 
 // uppercase and lowercase letters (a - z).
-
-function compressString(str) {
-	let compressedString = "";
-	let counter = 0;
-
-	for (i=0; i<str.length; i++) { // O(n)
-		counter++;
-		if (str[i+1] != str[i]) {
-			compressedString += str[i] + counter; // O(n)
-			counter = 0;
-		}
-	}
-	return compressedString;
-};
-
-function isCompressed(originalString, compressedString) {
-	return originalString.length > compressedString.length;
-};
+const Api = require('./lib/api');
+const api = new Api();  
 
 let str = "aabcccccaaa";
-console.log(isCompressed(str, compressString(str)));
+console.log(api.isCompressed(str, api.compressString(str)));
