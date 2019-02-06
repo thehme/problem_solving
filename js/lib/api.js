@@ -1,4 +1,19 @@
 module.exports = class Api {
+    isPrimeRegular(n) {
+        if (n <= 1) {
+            return false;
+        } else {
+            var isPrime = true;
+            for (var i=2; i<n; i++) {
+                if (n%i === 0) {
+                    isPrime = false;
+                    break;
+                }
+            } 
+            return isPrime;
+        }
+    }
+
     sumNumbersRecursively(n) {
         // base case 
         if (n <= 0) {
