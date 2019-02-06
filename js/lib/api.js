@@ -1,4 +1,30 @@
 module.exports = class Api {
+    factorialRecursive(n) {
+        // base case
+        if (n <= 1) {
+            return 1;
+        } else {
+            // recursive section
+            return n * this.factorialRecursive(n - 1);
+        }
+    }
+
+    factorialRegular(n) {
+        let total = 1;
+        for (var i = 1; i <= n; i++) {
+            total *= i;
+        }
+        return total;
+    }
+
+    isPrimeRecursively(n) {
+        if (n <= 1) {
+            return false;
+        } else {
+            
+        }
+    };
+
     isPrimeRegular(n) {
         if (n <= 1) {
             return false;
@@ -12,7 +38,7 @@ module.exports = class Api {
             } 
             return isPrime;
         }
-    }
+    };
 
     sumNumbersRecursively(n) {
         // base case 
@@ -21,7 +47,7 @@ module.exports = class Api {
         } else {
             return n + this.sumNumbersRecursively(n - 1);
         }
-    }
+    };
 
     rotateMatrix(matrix) {
         let rotatedMatrix = Array(matrix.length, matrix.length);
