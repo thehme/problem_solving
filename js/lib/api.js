@@ -1,4 +1,13 @@
 module.exports = class Api {
+    sumNumbersRecursively(n) {
+        // base case 
+        if (n <= 0) {
+            return 0;
+        } else {
+            return n + this.sumNumbersRecursively(n - 1);
+        }
+    }
+
     rotateMatrix(matrix) {
         let rotatedMatrix = Array(matrix.length, matrix.length);
         for (var row = 0; row < matrix.length; row++) {
