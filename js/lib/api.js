@@ -89,27 +89,30 @@ module.exports = class Api {
         
         for (var i=0; i<word1.length; i++) {
             if (i==0) {
-            countChars1[word1[i]] = 1;
+                countChars1[word1[i]] = 1;
             } else if (!countChars1[word1[i]]) {
-            countChars1[word1[i]] = 1;
+                countChars1[word1[i]] = 1;
             } else {
-            countChars1[word1[i]]++;
+                countChars1[word1[i]]++;
             }
         }
         
         for (var i=0; i<word2.length; i++) {
             if (i==0) {
-            countChars2[word2[i]] = 1;
+                countChars2[word2[i]] = 1;
             } else if (!countChars2[word2[i]]) {
-            countChars2[word2[i]] = 1;
+                countChars2[word2[i]] = 1;
             } else {
-            countChars2[word2[i]]++;
+                countChars2[word2[i]]++;
             }
         }
+
+        console.log(countChars1);
+        console.log(countChars2);
         
         for (var i=0; i<word1.length; i++) {
-            if (countChars1[word1[i]] != countChars1[word2[i]]) {
-            return false;
+            if (countChars1[word1[i]] !== countChars1[word2[i]]) {
+                return false;
             }
         }
         return true;
