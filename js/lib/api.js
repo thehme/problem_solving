@@ -124,9 +124,11 @@ module.exports = class Api {
             hashCounts[word[i]] = 1;
             } else {
             hashCounts[word[i]]++;
+	    console.log(hashCounts);
             return false;
             }
         }
+	console.log(hashCounts);
         return true;
     }
 
