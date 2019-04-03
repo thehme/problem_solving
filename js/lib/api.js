@@ -163,7 +163,7 @@ module.exports = class Api {
           }
         }
         return temp.join("");
-    }
+    };
 
     zeroColRow(m) {
         var rows = m.length;
